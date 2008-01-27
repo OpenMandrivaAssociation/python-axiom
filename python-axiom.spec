@@ -6,6 +6,7 @@ Group: Development/Python
 URL: http://www.divmod.org/trac/wiki/DivmodEpsilon
 Source0: Axiom-%{version}.tar.gz
 License: BSD
+BuildRequires: python-epsilon
 Requires: python-epsilon 
 Provides: python-Axiom = %version
 Provides: Axiom = %version
