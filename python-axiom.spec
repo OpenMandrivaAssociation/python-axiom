@@ -9,7 +9,7 @@ License: BSD
 Requires: python-epsilon 
 Provides: python-Axiom = %version
 Provides: Axiom = %version
-BuildRequires: python-epsilon
+BuildRequires: python-epsilon, python-twisted
 %py_requires -d
 
 %description
