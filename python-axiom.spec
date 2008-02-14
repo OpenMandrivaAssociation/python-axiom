@@ -3,6 +3,7 @@ Summary: Axiom is an object database, or alternatively, an object-relational map
 Version: 0.5.27
 Release: %mkrel 2
 Group: Development/Python 
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://www.divmod.org/trac/wiki/DivmodEpsilon
 Source0: Axiom-%{version}.tar.gz
 License: BSD
