@@ -1,7 +1,7 @@
 Name: python-axiom
 Summary: Object database, or alternatively, an object-relational mapper
 Version: 0.5.27
-Release: %mkrel 2
+Release: %mkrel 3
 Group: Development/Python 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://www.divmod.org/trac/wiki/DivmodEpsilon
