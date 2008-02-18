@@ -1,5 +1,5 @@
 Name: python-axiom
-Summary: Axiom is an object database, or alternatively, an object-relational mapper
+Summary: Object database, or alternatively, an object-relational mapper
 Version: 0.5.27
 Release: %mkrel 2
 Group: Development/Python 
