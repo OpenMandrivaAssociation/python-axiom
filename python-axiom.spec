@@ -1,39 +1,43 @@
-Name: python-axiom
-Summary: Object database, or alternatively, an object-relational mapper
-Version: 0.5.27
-Release: %mkrel 3
-Group: Development/Python 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL: http://www.divmod.org/trac/wiki/DivmodEpsilon
-Source0: Axiom-%{version}.tar.gz
-License: BSD
-Requires: python-epsilon 
-Provides: python-Axiom = %version
-Provides: Axiom = %version
-BuildRequires: python-epsilon, python-twisted
+%define module  axiom
+%define name	python-%{module}
+%define version 0.5.27
+%define release 4
+
+Name: 		%{name}
+Summary: 	Object database, or alternatively, an object-relational mapper
+Version: 	%{version}
+Release: 	%{release}
+Group: 		Development/Python 
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+URL: 		http://www.divmod.org/trac/wiki/DivmodEpsilon
+Source0: 	Axiom-%{version}.tar.gz
+License: 	BSD
+Requires: 	python-epsilon 
+Provides: 	python-Axiom = %{version}
+Provides: 	Axiom = %{version}
+BuildRequires: 	python-epsilon, python-twisted
+BuildArch:	noarch
 %py_requires -d
 
 %description
 Axiom is an object database, or alternatively, an object-relational mapper.
 
-%files
-%defattr(-,root,root)
-%_bindir/*
-%py_platsitedir/*
-
-#------------------------------------------------------------
-
 %prep
 %setup -q -n Axiom-%version
 
 %build
-python setup.py build
+%__python setup.py build
 
 %install
-rm -rf %buildroot
+%__rm -rf %buildroot
 
-python setup.py install --root=%buildroot --install-lib=%py_platsitedir
+%__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES.tmp
+%__grep -v %{py_sitedir}/build INSTALLED_FILES.tmp > INSTALLED_FILES
+%__rm -rf %{buildroot}%{py_sitedir}/build
 
 %clean
-rm -rf %buildroot
+%__rm -rf %buildroot
 
+%files -f INSTALLED_FILES
+%defattr(-,root,root)
+%doc *.txt LICENSE
