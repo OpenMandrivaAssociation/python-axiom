@@ -6,7 +6,7 @@
 Name: 		%{name}
 Summary: 	Object database, or alternatively, an object-relational mapper
 Version: 	%{version}
-Release: 	%{release}
+Release: 	%mkrel %{release}
 Group: 		Development/Python 
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		http://www.divmod.org/trac/wiki/DivmodAxiom
