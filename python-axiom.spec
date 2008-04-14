@@ -9,7 +9,7 @@ Version: 	%{version}
 Release: 	%{release}
 Group: 		Development/Python 
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL: 		http://www.divmod.org/trac/wiki/DivmodEpsilon
+URL: 		http://www.divmod.org/trac/wiki/DivmodAxiom
 Source0: 	Axiom-%{version}.tar.gz
 License: 	BSD
 Requires: 	python-epsilon 
