@@ -35,7 +35,7 @@ Axiom is an object database, or alternatively, an object-relational mapper.
 %__grep -v %{py_sitedir}/build INSTALLED_FILES.tmp > INSTALLED_FILES
 %__rm -rf %{buildroot}%{py_sitedir}/build
 # I don't think it would be right to package this - AdamW 2008/12
-rm -rf %{py_puresitedir}/twisted/plugins
+rm -rf %{buildroot}%{py_puresitedir}/twisted/plugins
 
 %clean
 %__rm -rf %buildroot
