@@ -1,7 +1,7 @@
 %define module  axiom
 %define name	python-%{module}
-%define version 0.5.27
-%define release 4
+%define version 0.5.30
+%define release 1
 
 Name: 		%{name}
 Summary: 	Object database, or alternatively, an object-relational mapper
