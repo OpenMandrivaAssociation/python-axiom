@@ -1,22 +1,22 @@
 %define module  axiom
 %define name	python-%{module}
-%define version 0.5.30
-%define release 1
+%define version 0.6.0
+%define release %mkrel 1
 
 Name: 		%{name}
 Summary: 	Object database, or alternatively, an object-relational mapper
 Version: 	%{version}
-Release: 	%mkrel %{release}
+Release: 	%{release}
 Group: 		Development/Python 
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		http://www.divmod.org/trac/wiki/DivmodAxiom
-Source0: 	Axiom-%{version}.tar.gz
+Source0: 	http://divmod.org/trac/attachment/wiki/SoftwareReleases/Axiom-%{version}.tar.gz
 License: 	BSD
 Requires: 	python-epsilon 
 Provides: 	python-Axiom = %{version}
 Provides: 	Axiom = %{version}
 BuildRequires: 	python-epsilon, python-twisted
 BuildArch:	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %py_requires -d
 
 %description
