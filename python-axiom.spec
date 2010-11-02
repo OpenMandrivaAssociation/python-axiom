@@ -14,10 +14,9 @@ License: 	BSD
 Requires: 	python-epsilon 
 Provides: 	python-Axiom = %{version}
 Provides: 	Axiom = %{version}
-BuildRequires: 	python-epsilon, python-twisted
+BuildRequires: 	python-epsilon, python-twisted, python-devel
 BuildArch:	noarch
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-%py_requires -d
 
 %description
 Axiom is an object database, or alternatively, an object-relational mapper.
@@ -31,7 +30,7 @@ Axiom is an object database, or alternatively, an object-relational mapper.
 %install
 %__rm -rf %buildroot
 
-%__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES.tmp
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES.tmp
 %__grep -v %{py_sitedir}/build INSTALLED_FILES.tmp > INSTALLED_FILES
 %__rm -rf %{buildroot}%{py_sitedir}/build
 # I don't think it would be right to package this - AdamW 2008/12
@@ -43,4 +42,3 @@ rm -f %{buildroot}%{py_puresitedir}/twisted/plugins/dropin.cache
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
 %doc *.txt LICENSE
-
