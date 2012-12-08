@@ -1,7 +1,7 @@
 %define module  axiom
 %define name	python-%{module}
 %define version 0.6.0
-%define release %mkrel 2
+%define release %mkrel 4
 
 Name: 		%{name}
 Summary: 	Object database, or alternatively, an object-relational mapper
@@ -42,3 +42,45 @@ rm -f %{buildroot}%{py_puresitedir}/twisted/plugins/dropin.cache
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
 %doc *.txt LICENSE
+
+
+%changelog
+* Thu May 05 2011 Oden Eriksson <oeriksson@mandriva.com> 0.6.0-2mdv2011.0
++ Revision: 667911
+- mass rebuild
+
+* Tue Nov 02 2010 Ahmad Samir <ahmadsamir@mandriva.org> 0.6.0-1mdv2011.0
++ Revision: 592473
+- rebuild for python 2.7
+- drop the obselete %%py_requires macro and use BR python-devel
+
+* Sun Jan 10 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.6.0-1mdv2010.1
++ Revision: 489386
+- new version
+
+* Thu Dec 25 2008 Adam Williamson <awilliamson@mandriva.org> 0.5.30-1mdv2009.1
++ Revision: 318783
+- make the deletion less general and PLEASE FUCKING WORK THIS TIME
+- delete some cache that gets generated during %%install
+- rebuild for python 2.6
+- new version 0.5.30
+
+* Mon Apr 14 2008 Lev Givon <lev@mandriva.org> 0.5.27-4mdv2009.0
++ Revision: 193407
+- Build as noarch package.
+  Don't install build files.
+
+* Mon Feb 18 2008 Thierry Vignaud <tv@mandriva.org> 0.5.27-3mdv2008.1
++ Revision: 171057
+- rebuild
+- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
+- fix no-buildroot-tag
+
+* Tue Jan 29 2008 Erwan Velu <erwan@mandriva.org> 0.5.27-2mdv2008.1
++ Revision: 159812
+- Adding more buildrequires
+
+  + Helio Chissini de Castro <helio@mandriva.com>
+    - import python-axiom
+
+
