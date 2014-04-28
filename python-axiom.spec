@@ -27,13 +27,11 @@ Axiom is an object database, or alternatively, an object-relational mapper.
 %__python setup.py build
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=INSTALLED_FILES.tmp
-grep -v %{py_puresitedir}/build INSTALLED_FILES.tmp > INSTALLED_FILES
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 rm -rf %{buildroot}%{py_puresitedir}/build
-# I don't think it would be right to package this - AdamW 2008/12
 rm -f %{buildroot}%{py_puresitedir}/twisted/plugins/dropin.cache
 
-%files -f INSTALLED_FILES
+%files
 %doc *.txt LICENSE
-
-
+%{py_puresitedir}/*
+%{_bindir}/*
