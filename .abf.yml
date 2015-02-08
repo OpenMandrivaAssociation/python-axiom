@@ -1,4 +1,5 @@
 removed_sources:
   Axiom-0.6.0.tar.gz: b7f11cadcedc755276120469f141e02a13149914
-sources:
   Axiom-0.7.1.tar.gz: 35a8d7d38bbe983955d5704a1c294f67d36e1df2
+sources:
+  Axiom-0.7.2.tar.gz: 8c020e2ad809a9c969ea9c48cca7b7667641eaee

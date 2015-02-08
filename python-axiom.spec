@@ -3,8 +3,8 @@
 Summary:	Object database, or alternatively, an object-relational mapper
 
 Name:		python-%{module}
-Version:	0.7.1
-Release:	4
+Version:	0.7.2
+Release:	1
 Group:		Development/Python 
 License:	BSD
 Url:		http://www.divmod.org/trac/wiki/DivmodAxiom
@@ -12,7 +12,7 @@ Source0:	https://pypi.python.org/packages/source/A/Axiom/Axiom-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	python-epsilon
 BuildRequires:	python-twisted
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 Requires:	python-epsilon 
 Provides:	python-Axiom = %{version}
 Provides:	Axiom = %{version}
@@ -24,14 +24,14 @@ Axiom is an object database, or alternatively, an object-relational mapper.
 %setup -qn Axiom-%{version}
 
 %build
-%__python setup.py build
+%__python2 setup.py build
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
-rm -rf %{buildroot}%{py_puresitedir}/build
-rm -f %{buildroot}%{py_puresitedir}/twisted/plugins/dropin.cache
+PYTHONDONTWRITEBYTECODE= %__python2 setup.py install --root=%{buildroot}
+rm -rf %{buildroot}%{py2_puresitedir}/build
+rm -f %{buildroot}%{py2_puresitedir}/twisted/plugins/dropin.cache
 
 %files
 %doc *.txt LICENSE
-%{py_puresitedir}/*
+%{py2_puresitedir}/*
 %{_bindir}/*
