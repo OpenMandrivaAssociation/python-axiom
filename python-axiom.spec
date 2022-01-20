@@ -1,3 +1,7 @@
+NOTE: This package cannot now be build because python2 support has been droppeed in
+some of the dependent packages. Porting axion to Python3 has been done and awaits 
+review and merge so the package should be retained in our repo.
+
 %define module  axiom
 
 Summary:	Object database, or alternatively, an object-relational mapper
