@@ -8,7 +8,7 @@ Summary:	Object database, or alternatively, an object-relational mapper
 
 Name:		python-%{module}
 Version:	0.7.5
-Release:	1
+Release:	2
 Group:		Development/Python 
 License:	BSD
 Url:		http://www.divmod.org/trac/wiki/DivmodAxiom
