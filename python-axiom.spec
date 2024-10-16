@@ -7,7 +7,7 @@ Version:	0.9.0
 Release:	1
 Group:		Development/Python 
 License:	BSD
-Url:		http://www.divmod.org/trac/wiki/DivmodAxiom
+Url:		https://www.divmod.org/trac/wiki/DivmodAxiom
 Source:		https://github.com/twisted/axiom/archive/refs/heads/master.tar.gz
 BuildArch:	noarch
 BuildRequires:	python%{pyver}dist(epsilon)
